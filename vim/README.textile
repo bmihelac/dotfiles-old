@@ -1,15 +1,15 @@
 h1. Usage
 
-Clone this repo into your home directory either as .vim (linux) or vimfiles (MF
-Windows).
-
-Then cd into the repo and run this to get the snippets submodule:
+cd into the repo and run this to get the snippets submodule:
 
 <pre><code>
 git submodule init
 git submodule update
 </code></pre>
 
+Install vim files:
+
 <pre><code>
+ln -s REPOS_DIR/vim ~/.vim
 ln -s .vim/myvimrc .vimrc
 </code></pre>
