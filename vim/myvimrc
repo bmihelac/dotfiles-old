@@ -5,7 +5,7 @@ source ~/.vim/vimrc
 set tags=tags;$HOME/.vim/tags/ "recursively searches directory for 'tags' file
 
 " TagList Plugin Configuration
-let Tlist_Ctags_Cmd='/usr/bin/ctags' " point taglist to ctags
+"let Tlist_Ctags_Cmd='/usr/bin/ctags' " point taglist to ctags
 let Tlist_GainFocus_On_ToggleOpen = 1      " Focus on the taglist when its toggled
 let Tlist_Close_On_Select = 1              " Close when something's selected
 let Tlist_Use_Right_Window = 1             " Project uses the left window
@@ -25,3 +25,21 @@ autocmd FileType python set ft=python.django " For SnipMate
 autocmd FileType html set ft=htmldjango.html " For SnipMate
 autocmd FileType xhtml set ft=htmldjango.html " For SnipMate
 
+" Tidy
+setlocal makeprg=tidy\ -quiet\ -errors\ %
+setlocal errorformat=line\ %l\ column\ %v\ -\ %m
+
+" for CSS, also have things in braces indented:
+autocmd FileType css set smartindent
+" for HTML, generally format text, but if a long line has been created
+" leave it alone when editing:
+autocmd FileType html set formatoptions+=tl
+" for both CSS and HTML, use genuine tab characters for 
+" indentation, to make files a few bytes smaller:
+autocmd FileType html,css set noexpandtab tabstop=2
+
+" line numbers
+:nmap <C-N><C-N> :set invnumber<CR>
+
+" ignore
+:set wildignore=*.o,*~,*.pyc
