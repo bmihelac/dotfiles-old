@@ -28,3 +28,8 @@ MacVim cloned and installed with:
 --with-python-config-dir=/Library/Frameworks/Python.framework/Versions/2.6 \
 --enable-cscope
 
+h2. Notes
+
+h3. Fuzzy search textmate
+
+http://codeulate.com/2010/02/installing-fuzzyfinder_textmate-textmates-cmdt-in-vim/

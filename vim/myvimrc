@@ -43,3 +43,6 @@ autocmd FileType html,css set noexpandtab tabstop=2
 
 " ignore
 :set wildignore=*.o,*~,*.pyc
+
+" Textmate fuzzyfinder
+map <leader>t :FuzzyFinderTextMate<CR>
