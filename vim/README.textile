@@ -13,3 +13,18 @@ Install vim files:
 ln -s REPOS_DIR/vim ~/.vim
 ln -s .vim/myvimrc .vimrc
 </code></pre>
+
+h2. Python plugins
+
+rope, rope, ropevim install with easy_install or pip.
+
+h2. OSX specific 
+
+MacVim cloned and installed with:
+
+./configure --with-features=huge \
+--enable-rubyinterp \
+--enable-pythoninterp \
+--with-python-config-dir=/Library/Frameworks/Python.framework/Versions/2.6 \
+--enable-cscope
+
