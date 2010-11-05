@@ -16,3 +16,6 @@ map <F4> :TlistToggle<CR>
 map <F2> :marks
 
 :set guioptions-=T  "remove toolbar
+
+" Change to directory of the opened file
+command! CD cd %:p:h
