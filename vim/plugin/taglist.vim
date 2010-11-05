@@ -981,7 +981,13 @@ endfunction
 " Tlist_Get_Buffer_Filetype
 " Get the filetype for the specified buffer
 function! s:Tlist_Get_Buffer_Filetype(bnum)
+    "bmihelac: 
+    "handle python.django filtetypes
     let buf_ft = getbufvar(a:bnum, '&filetype')
+    let buf_fts = split(buf_ft, '\.')
+    if len(buf_fts) != 0
+        let buf_ft = buf_fts[0]
+    endif
 
     if bufloaded(a:bnum)
         " For loaded buffers, the 'filetype' is already determined
