@@ -2,7 +2,7 @@ source ~/.vim/vimrc
 
 " syntax for multiple tag files are
 " set tags=/my/dir1/tags, /my/dir2/tags
-set tags=tags;$HOME/.vim/tags/ "recursively searches directory for 'tags' file
+"set tags=./tags;$HOME/.vim/tags/ "recursively searches directory for 'tags' file
 
 " TagList Plugin Configuration
 "let Tlist_Ctags_Cmd='/usr/bin/ctags' " point taglist to ctags
@@ -10,6 +10,7 @@ let Tlist_GainFocus_On_ToggleOpen = 1      " Focus on the taglist when its toggl
 let Tlist_Close_On_Select = 1              " Close when something's selected
 let Tlist_Use_Right_Window = 1             " Project uses the left window
 let Tlist_File_Fold_Auto_Close = 1         " Close folds for inactive files
+let Tlist_Show_Menu = 1
 
 map <F3> :NERDTreeToggle<CR>
 map <F4> :TlistToggle<CR>
@@ -46,3 +47,4 @@ autocmd FileType html,css set noexpandtab tabstop=2
 
 " Textmate fuzzyfinder
 map <leader>t :FuzzyFinderTextMate<CR>
+let g:fuzzy_ignore="*.pyc,*~"
