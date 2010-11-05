@@ -19,3 +19,8 @@ map <F2> :marks
 
 " Change to directory of the opened file
 command! CD cd %:p:h
+
+" Activate the snippets
+autocmd FileType python set ft=python.django " For SnipMate
+autocmd FileType html set ft=htmldjango.html " For SnipMate
+
