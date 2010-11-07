@@ -259,6 +259,8 @@ nnoremap Y y$
 
 "mark syntax errors with :signs
 let g:syntastic_enable_signs=1
+" Disable syntax checkers for django
+let g:syntastic_disabled_filetypes = ['html']
 
 "snipmate setup
 source ~/.vim/snippets/support_functions.vim
