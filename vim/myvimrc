@@ -37,7 +37,7 @@ autocmd FileType css set smartindent
 autocmd FileType html set formatoptions+=tl
 " for both CSS and HTML, use genuine tab characters for 
 " indentation, to make files a few bytes smaller:
-autocmd FileType html,css set noexpandtab tabstop=2
+autocmd FileType html,css,htmldjango.html set noexpandtab tabstop=2
 
 " line numbers
 :nmap <C-N><C-N> :set invnumber<CR>
