@@ -27,8 +27,8 @@ autocmd FileType html set ft=htmldjango.html " For SnipMate
 autocmd FileType xhtml set ft=htmldjango.html " For SnipMate
 
 " Tidy
-setlocal makeprg=tidy\ -quiet\ -errors\ %
-setlocal errorformat=line\ %l\ column\ %v\ -\ %m
+"setlocal makeprg=tidy\ -quiet\ -errors\ %
+"setlocal errorformat=line\ %l\ column\ %v\ -\ %m
 
 " for CSS, also have things in braces indented:
 autocmd FileType css set smartindent
