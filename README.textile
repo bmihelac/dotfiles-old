@@ -1,0 +1,5 @@
+h2. Git config
+
+ln -s -f ~/dev/dotfiles/gitignore .gitignore
+ln -s -f ~/dev/dotfiles/gitconfig .gitconfig
+
