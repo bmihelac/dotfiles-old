@@ -72,3 +72,6 @@ map <D-7> 7gt
 map <D-8> 8gt
 map <D-9> 9gt
 
+"toggle search options
+:map <F6> :set invhlsearch<CR>
+:map <D-F6> :set invincsearch<CR>
