@@ -58,4 +58,17 @@ let g:fuzzy_ignore="*.pyc,*~"
 " map shift+enter to add new line below current staying in normal mode 
 map <S-Enter> o<Esc>
 
+" map cmd-] and cmd-[ to next/prev tab
+" TODO: test in ubuntu
+nmap <D-[> gT
+nmap <D-]> gt
+map <D-1> 1gt
+map <D-2> 2gt
+map <D-3> 3gt
+map <D-4> 4gt
+map <D-5> 5gt
+map <D-6> 6gt
+map <D-7> 7gt
+map <D-8> 8gt
+map <D-9> 9gt
 
