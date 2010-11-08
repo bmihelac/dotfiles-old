@@ -49,6 +49,13 @@ autocmd FileType js,html,css,htmldjango.html set noexpandtab tabstop=4
 map <leader>t :FuzzyFinderTextMate<CR>
 let g:fuzzy_ignore="*.pyc,*~"
 
+"NerdTREE mapings
+:map <F5> :NERDTreeFind<CR>
+
 " Auto reload changed files
 :set autoread
+
+" map shift+enter to add new line below current staying in normal mode 
+map <S-Enter> o<Esc>
+
 
