@@ -33,3 +33,7 @@ h2. Notes
 h3. Fuzzy search textmate
 
 http://codeulate.com/2010/02/installing-fuzzyfinder_textmate-textmates-cmdt-in-vim/
+
+h3. JSLint
+
+Install node.js
