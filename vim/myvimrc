@@ -47,7 +47,8 @@ autocmd FileType js,html,css,htmldjango.html set noexpandtab tabstop=4
 
 " Textmate fuzzyfinder
 map <leader>t :FuzzyFinderTextMate<CR>
-let g:fuzzy_ignore="*.pyc,*~"
+map <C-F6> :FuzzyFinderTextMateRefreshFiles<CR>
+let g:fuzzy_ignore="*.pyc,*~,tmp/*"
 
 "NerdTREE mapings
 :map <F5> :NERDTreeFind<CR>
