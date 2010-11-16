@@ -76,8 +76,28 @@ map <D-8> 8gt
 map <D-9> 9gt
 
 "toggle search options
-:map <F6> :set invhlsearch<CR>
 :map <D-F6> :set invincsearch<CR>
+:nmap <silent> ,/ :nohlsearch<CR>
 
 "copy current file name to register
 :nmap cp :let @" = expand('%:t')<CR>
+
+"Map leader to ,
+let mapleader = ","
+
+" Scroll the viewport faster
+nnoremap <C-e> 3<C-e>
+nnoremap <C-y> 3<C-y>
+
+set visualbell           " don't beep
+set noerrorbells         " don't beep
+
+" Use Q for formatting the current paragraph (or selection)
+vmap Q gq
+nmap Q gqap
+
+" Easy window navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
