@@ -76,7 +76,7 @@ map <D-8> 8gt
 map <D-9> 9gt
 
 "toggle search options
-:map <D-F6> :set invincsearch<CR>
+:map <D-F5> :set invincsearch<CR>
 :nmap <silent> ,/ :nohlsearch<CR>
 
 "copy current file name to register
@@ -101,3 +101,7 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+
+" disable backups
+set nobackup
+set noswapfile
