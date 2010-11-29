@@ -39,7 +39,7 @@ autocmd FileType css set smartindent
 autocmd FileType html set formatoptions+=tl
 " for both CSS and HTML, use genuine tab characters for 
 " indentation, to make files a few bytes smaller:
-autocmd FileType js,html,css,htmldjango.html set noexpandtab tabstop=4
+autocmd FileType javascript,html,css,htmldjango set noexpandtab tabstop=4
 autocmd FileType python set ai ts=4 sts=4 et sw=4
 
 " line numbers
@@ -106,3 +106,6 @@ map <C-l> <C-w>l
 " disable backups
 set nobackup
 set noswapfile
+
+" highlights the background in a subtle red for text that goes over the 80
+set cc=80
