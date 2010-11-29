@@ -80,7 +80,7 @@ map <D-9> 9gt
 :nmap <silent> ,/ :nohlsearch<CR>
 
 "copy current file name to register
-:nmap cp :let @" = expand('%:t')<CR>
+:nmap cp :let @+ = expand('%:t')<CR>
 
 "Map leader to ,
 let mapleader = ","
