@@ -40,6 +40,7 @@ autocmd FileType html set formatoptions+=tl
 " for both CSS and HTML, use genuine tab characters for 
 " indentation, to make files a few bytes smaller:
 autocmd FileType js,html,css,htmldjango.html set noexpandtab tabstop=4
+autocmd FileType python set ai ts=4 sts=4 et sw=4
 
 " line numbers
 :nmap <C-N><C-N> :set invnumber<CR>
