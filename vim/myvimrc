@@ -1,6 +1,7 @@
 call pathogen#runtime_append_all_bundles() 
 
 source ~/.vim/vimrc
+source ~/.vim/activate_django.vim
 
 " syntax for multiple tag files are
 " set tags=/my/dir1/tags, /my/dir2/tags
@@ -39,8 +40,9 @@ autocmd FileType css set smartindent
 autocmd FileType html set formatoptions+=tl
 " for both CSS and HTML, use genuine tab characters for 
 " indentation, to make files a few bytes smaller:
-autocmd FileType javascript,html,css,htmldjango set noexpandtab tabstop=4
+autocmd FileType html,css,htmldjango set noexpandtab tabstop=4
 autocmd FileType python set ai ts=4 sts=4 et sw=4
+autocmd FileType javascript set ai et ts=2 sts=2 sw=2
 
 " line numbers
 :nmap <C-N><C-N> :set invnumber<CR>
@@ -109,3 +111,4 @@ set noswapfile
 
 " highlights the background in a subtle red for text that goes over the 80
 set cc=80
+
