@@ -45,7 +45,7 @@ autocmd FileType python set ai ts=4 sts=4 et sw=4
 autocmd FileType javascript set ai et ts=2 sts=2 sw=2
 
 " line numbers
-:nmap <C-N><C-N> :set invnumber<CR>
+:nmap <leader>n :set invnumber<CR>
 
 " ignore
 :set wildignore=*.o,*~,*.pyc
@@ -112,3 +112,5 @@ set noswapfile
 " highlights the background in a subtle red for text that goes over the 80
 set cc=80
 
+"yankring
+:nnoremap <silent> <F10> :YRShow<CR>
