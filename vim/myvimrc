@@ -114,3 +114,6 @@ set cc=80
 
 "yankring
 :nnoremap <silent> <F10> :YRShow<CR>
+
+" replace the current word with the last yanked text
+nnoremap S "_diwP
