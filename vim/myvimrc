@@ -45,7 +45,7 @@ autocmd FileType python set ai ts=4 sts=4 et sw=4
 autocmd FileType javascript,scss,css set ai et ts=2 sts=2 sw=2
 
 " line numbers
-:nmap <leader>n :set invnumber<CR>
+:nmap <F9> :set invnumber<CR>
 
 " ignore
 :set wildignore=*.o,*~,*.pyc
@@ -117,3 +117,8 @@ set cc=80
 
 " replace the current word with the last yanked text
 nnoremap S "_diwP
+
+" rest headings
+let @q='yypVr='
+let @w='yypVr-'
+let @e='yypVr^'
