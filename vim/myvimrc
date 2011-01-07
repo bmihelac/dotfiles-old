@@ -131,7 +131,9 @@ import vim
 def EvaluateCurrentRange(): 
     eval(compile('\n'.join(vim.current.range),'','exec'),globals()) 
 EOL 
-map <C-h> :py EvaluateCurrentRange() 
+map <A-h> :py EvaluateCurrentRange() 
 "
+
+autocmd FileType python set omnifunc=pythoncomplete#Complete
 
 map <silent> <F12> :let @+=@"<CR>
