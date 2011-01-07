@@ -133,3 +133,5 @@ def EvaluateCurrentRange():
 EOL 
 map <C-h> :py EvaluateCurrentRange() 
 "
+
+map <silent> <F12> :let @+=@"<CR>
