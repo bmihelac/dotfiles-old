@@ -77,6 +77,8 @@ map <D-6> 6gt
 map <D-7> 7gt
 map <D-8> 8gt
 map <D-9> 9gt
+map <silent><A-Right> :tabnext<CR> 
+map <silent><A-Left> :tabprevious<CR> 
 
 "toggle search options
 :map <D-F5> :set invincsearch<CR>
@@ -122,3 +124,12 @@ nnoremap S "_diwP
 let @q='yypVr='
 let @w='yypVr-'
 let @e='yypVr^'
+
+" evaluate python
+python << EOL 
+import vim 
+def EvaluateCurrentRange(): 
+    eval(compile('\n'.join(vim.current.range),'','exec'),globals()) 
+EOL 
+map <C-h> :py EvaluateCurrentRange() 
+"
