@@ -64,6 +64,9 @@ let g:fuzzy_ignore="*.pyc,*~,tmp/*"
 " map shift+enter to add new line below current staying in normal mode 
 map <S-Enter> o<Esc>
 
+" smart ignorecase
+:set smartcase
+
 " map cmd-] and cmd-[ to next/prev tab
 " TODO: test in ubuntu
 nmap <D-[> gT
@@ -125,15 +128,24 @@ let @q='yypVr='
 let @w='yypVr-'
 let @e='yypVr^'
 
-" evaluate python
-python << EOL 
-import vim 
-def EvaluateCurrentRange(): 
-    eval(compile('\n'.join(vim.current.range),'','exec'),globals()) 
-EOL 
-map <A-h> :py EvaluateCurrentRange() 
-"
-
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 
 map <silent> <F12> :let @+=@"<CR>
+
+" Run the current buffer as Python code
+fu! DoRunPyBuffer2()
+    pclose! " force preview window closed
+    setlocal ft=python
+
+    " copy the buffer into a new window, then run that buffer through python
+    sil %y a | below new | sil put a | sil %!python -
+    " indicate the output window as the current previewwindow
+    setlocal previewwindow ro nomodifiable nomodified
+
+    " back into the original window
+    winc p
+endfu
+
+command! RunPyBuffer call DoRunPyBuffer2()
+map <Leader>p :RunPyBuffer<CR>
+
