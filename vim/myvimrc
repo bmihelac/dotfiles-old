@@ -40,7 +40,7 @@ autocmd FileType css set smartindent
 autocmd FileType html set formatoptions+=tl
 " for both CSS and HTML, use genuine tab characters for 
 " indentation, to make files a few bytes smaller:
-autocmd FileType html,htmldjango set noexpandtab tabstop=4
+autocmd FileType html,htmldjango set et sw=2 sts=2 ts=2
 autocmd FileType python set ai ts=4 sts=4 et sw=4
 autocmd FileType javascript,scss,css set ai et ts=2 sts=2 sw=2
 
@@ -53,6 +53,9 @@ autocmd FileType javascript,scss,css set ai et ts=2 sts=2 sw=2
 " Textmate fuzzyfinder
 map <leader>t :FuzzyFinderTextMate<CR>
 map <C-F6> :FuzzyFinderTextMateRefreshFiles<CR>
+" command-t
+map <C-F> :CommandT<CR>
+map <C-F6> :CommandTFlush<CR>
 let g:fuzzy_ignore="*.pyc,*~,tmp/*"
 
 "NerdTREE mapings
@@ -149,3 +152,5 @@ endfu
 command! RunPyBuffer call DoRunPyBuffer2()
 map <Leader>p :RunPyBuffer<CR>
 
+" sudo & write
+cmap w!! w !sudo tee % >/dev/null
