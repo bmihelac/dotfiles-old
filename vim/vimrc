@@ -262,6 +262,10 @@ let g:syntastic_enable_signs=1
 " Disable syntax checkers for django
 let g:syntastic_disabled_filetypes = ['html']
 
+"Use this option to tell syntastic to automatically open the |location-list|
+"(see |syntastic-error-window|) when a buffer has errors: >
+let g:syntastic_auto_loc_list=1
+
 "snipmate setup
 source ~/.vim/snippets/support_functions.vim
 autocmd vimenter * call s:SetupSnippets()
