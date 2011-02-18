@@ -158,3 +158,9 @@ if has("terminfo")
   set t_AF=[%?%p1%{8}%<%t%p1%{30}%+%e%p1%{82}%+%;%dm
   let g:CSApprox_loaded = 1
 end
+
+" MacVim
+if has("gui_macvim")
+    set guifont=Inconsolata:h14
+endif
+
