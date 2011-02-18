@@ -50,9 +50,6 @@ autocmd FileType javascript,scss,css set ai et ts=2 sts=2 sw=2
 " ignore
 :set wildignore=*.o,*~,*.pyc
 
-" Textmate fuzzyfinder
-map <leader>t :FuzzyFinderTextMate<CR>
-map <C-F6> :FuzzyFinderTextMateRefreshFiles<CR>
 " command-t
 map <C-F> :CommandT<CR>
 map <C-F6> :CommandTFlush<CR>
