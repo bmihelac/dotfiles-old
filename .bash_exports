@@ -1,0 +1,9 @@
+# History stuff
+shopt -s histappend
+
+export LC_CTYPE=en_US.UTF-8
+export SVN_EDITOR="vim"
+export GIT_EDITOR="vim"
+export EDITOR="vim"
+
+export TERM="xterm-color"
