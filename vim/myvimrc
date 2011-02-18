@@ -151,3 +151,10 @@ map <Leader>p :RunPyBuffer<CR>
 
 " sudo & write
 cmap w!! w !sudo tee % >/dev/null
+
+if has("terminfo")
+  set t_Co=16
+  set t_AB=[%?%p1%{8}%<%t%p1%{40}%+%e%p1%{92}%+%;%dm
+  set t_AF=[%?%p1%{8}%<%t%p1%{30}%+%e%p1%{82}%+%;%dm
+  let g:CSApprox_loaded = 1
+end
