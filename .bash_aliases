@@ -1,11 +1,10 @@
 # Git
-if [[ -e `which hub 2>/dev/null` ]]; then
-    alias git=hub
-fi
+alias ga='git add'
 alias gb='git branch'
 alias gba='git branch -a'
 alias gc='git commit -m'
-alias gca='git ci -m'
+alias gca='git commit -a -m'
+alias gc__='git checkout --'
 alias gd='git diff'
 alias gdc='git diff --cached'
 alias gl='git log'
@@ -13,9 +12,6 @@ alias glg="git log --graph --pretty=format:'%Cblue%h%Creset -%C(yellow)%d%Creset
 alias gpl='git pull'
 alias gps='git push'
 alias gs='git status'
-alias gsd='git svn dcommit'
-alias gsr='git svn rebase'
-alias gsf='git svn fetch'
 alias gt='git tag'
 alias gr='git rel'
 
