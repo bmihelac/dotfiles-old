@@ -130,9 +130,10 @@ let @w='yypVr-'
 let @e='yypVr^'
 
 " Python tools
-autocmd FileType python set omnifunc=pythoncomplete#Complete
 let ropevim_vim_completion=1
 let ropevim_extended_complete=1
+imap <F12> <M-/>
+
 
 map <silent> <F12> :let @+=@"<CR>
 
