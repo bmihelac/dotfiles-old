@@ -88,11 +88,13 @@ map <silent><A-Left> :tabprevious<CR>
 :map <D-F5> :set invincsearch<CR>
 :nmap <silent> ,/ :nohlsearch<CR>
 
-"copy current file name to register
-:nmap cp :let @+ = expand('%:t')<CR>
 
 "Map leader to ,
 let mapleader = ","
+"
+"copy current file name to register
+:nmap <Leader>f :let @+ = expand('%:t')<CR>
+:nmap <Leader>F :let @+ = expand('%:p')<CR>
 
 " Scroll the viewport faster
 nnoremap <C-e> 3<C-e>
