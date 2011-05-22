@@ -10,6 +10,7 @@ git submodule update
 Install vim files:
 
 <pre><code>
+cd ~
 ln -s REPOS_DIR/vim ~/.vim
 ln -s .vim/myvimrc .vimrc
 </code></pre>
