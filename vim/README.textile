@@ -29,6 +29,12 @@ MacVim cloned and installed with:
 --with-python-config-dir=/Library/Frameworks/Python.framework/Versions/2.6 \
 --enable-cscope
 
+h2. Ubuntu
+
+<pre><code>
+sudo apt-get install exuberant-ctags
+</code></pre>
+
 h2. Notes
 
 h3. Fuzzy search textmate
