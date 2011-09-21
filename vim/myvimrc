@@ -226,4 +226,6 @@ function! s:DiffWithSaved()
 endfunction
 com! DiffSaved call s:DiffWithSaved()
 
+" django test runner
+"map <leader>dt :set makeprg=python\ manage.py\ test\|:call MakeGreen()<CR>
 
