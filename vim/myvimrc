@@ -234,3 +234,6 @@ com! DiffSaved call s:DiffWithSaved()
 " django test runner
 "map <leader>dt :set makeprg=python\ manage.py\ test\|:call MakeGreen()<CR>
 
+" edit my vimrc
+:nnoremap <Leader>ev :vsplit $MYVIMRC<CR>
+:nnoremap <Leader>sv :so $MYVIMRC<CR>
