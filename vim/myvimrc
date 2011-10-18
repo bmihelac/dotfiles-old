@@ -232,3 +232,6 @@ com! DiffSaved call s:DiffWithSaved()
 " edit my vimrc
 :nnoremap <Leader>ev :vsplit $MYVIMRC<CR>
 :nnoremap <Leader>sv :so $MYVIMRC<CR>
+
+" ack
+:nnoremap <leader>a <Esc>:Ack! 
