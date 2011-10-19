@@ -24,4 +24,4 @@
 	url = git://github.com/reinh/vim-makegreen
 [submodule "vim/bundle/ack"]
 	path = vim/bundle/ack
-	url = https://github.com/mileszs/ack.vim.git
+	url = git://github.com/mileszs/ack.vim
