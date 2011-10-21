@@ -240,3 +240,8 @@ com! DiffSaved call s:DiffWithSaved()
 
 " ack
 :nnoremap <leader>a <Esc>:Ack! 
+
+"
+" swap 2 params in visual selection
+" ie: fun(a(), b()) => fun(b(), a())
+:vnoremap <Leader>s :s/\%V\([^,]\+\)\(, *\)\(.*\%V.\)/\3\2\1<CR>gv<Esc>:noh<CR>
