@@ -44,6 +44,8 @@ autocmd FileType html set formatoptions+=tl
 autocmd FileType html,htmldjango set et sw=2 sts=2 ts=2
 autocmd FileType python set ai ts=4 sts=4 et sw=4
 autocmd FileType javascript,scss,css set ai et ts=2 sts=2 sw=2
+autocmd BufNewFile,BufRead *.jst.ejs set filetype=html
+
 
 " line numbers
 :nmap <F9> :set invnumber<CR>
@@ -245,3 +247,5 @@ com! DiffSaved call s:DiffWithSaved()
 " swap 2 params in visual selection
 " ie: fun(a(), b()) => fun(b(), a())
 :vnoremap <Leader>s :s/\%V\([^,]\+\)\(, *\)\(.*\%V.\)/\3\2\1<CR>gv<Esc>:noh<CR>
+
+:nnoremap <Leader>sw :Git add .<CR>:Git commit -a -m "edited via VIM"<CR>:Git push<CR>
