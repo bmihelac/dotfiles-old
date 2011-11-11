@@ -44,6 +44,8 @@ autocmd FileType html set formatoptions+=tl
 autocmd FileType html,htmldjango set et sw=2 sts=2 ts=2
 autocmd FileType python set ai ts=4 sts=4 et sw=4
 autocmd FileType javascript,scss,css set ai et ts=2 sts=2 sw=2
+autocmd BufNewFile,BufRead *.jst.ejs set filetype=html
+
 
 " line numbers
 :nmap <F9> :set invnumber<CR>
@@ -177,6 +179,11 @@ if has("gui_macvim")
     set guifont=Monaco:h12
 endif
 
+"disable colorscheme for term
+if (&term == 'xterm-color')
+    colorscheme default
+endif
+
 "django mappings from http://code.djangoproject.com/wiki/UsingVimWithDjango#no1
 let g:last_relative_dir = ''
 nnoremap \1 :call RelatedFile ("models.py")<cr>
@@ -235,3 +242,10 @@ com! DiffSaved call s:DiffWithSaved()
 
 " ack
 :nnoremap <leader>a <Esc>:Ack! 
+
+"
+" swap 2 params in visual selection
+" ie: fun(a(), b()) => fun(b(), a())
+:vnoremap <Leader>s :s/\%V\([^,]\+\)\(, *\)\(.*\%V.\)/\3\2\1<CR>gv<Esc>:noh<CR>
+
+:nnoremap <Leader>sw :Git add .<CR>:Git commit -a -m "edited via VIM"<CR>:Git push<CR>
