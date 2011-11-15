@@ -249,3 +249,9 @@ com! DiffSaved call s:DiffWithSaved()
 :vnoremap <Leader>s :s/\%V\([^,]\+\)\(, *\)\(.*\%V.\)/\3\2\1<CR>gv<Esc>:noh<CR>
 
 :nnoremap <Leader>sw :Git add .<CR>:Git commit -a -m "edited via VIM"<CR>:Git push<CR>
+
+" Write contents of register to remote file
+:nnoremap <leader>xc :new<CR>P:w scp://localhost/clipboard.txt<CR><CR>:bd<CR>
+
+"quote every line in single quotes, add comma at the end, and reformat block
+:vnoremap <Leader>q' :s/\(.*\)/'\1',/g<CR>gv=:nohlsearch<CR>
