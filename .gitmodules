@@ -37,3 +37,6 @@
 [submodule "vim/bundle/vim-css-color"]
 	path = vim/bundle/vim-css-color
 	url = git://github.com/skammer/vim-css-color.git
+[submodule "vim/bundle/wombat256.vim"]
+	path = vim/bundle/wombat256.vim
+	url = git://github.com/vim-scripts/wombat256.vim.git
