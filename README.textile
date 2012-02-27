@@ -9,3 +9,4 @@ ln -s -f ~/dev/dotfiles/.bash_exports .bash_exports
 ln -s -f ~/dev/dotfiles/.bash_profile .bash_profile
 ln -s -f ~/dev/dotfiles/.bashrc .bashrc
 
+ln -s -f ~/dev/dotfiles/.ackrc .ackrc
