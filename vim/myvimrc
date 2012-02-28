@@ -257,6 +257,8 @@ com! DiffSaved call s:DiffWithSaved()
 "quote every line in single quotes, add comma at the end, and reformat block
 :vnoremap <Leader>q' :s/\(.*\)/'\1',/g<CR>gv=:nohlsearch<CR>
 
- " tidy html
+" tidy html
 :vnoremap <Leader>T :!tidy -q -i -xml<CR>
 
+" always vertical split in diff
+:set diffopt+=vertical
