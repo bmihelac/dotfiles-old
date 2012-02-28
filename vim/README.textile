@@ -44,3 +44,9 @@ http://codeulate.com/2010/02/installing-fuzzyfinder_textmate-textmates-cmdt-in-v
 h3. JSLint
 
 Install node.js
+
+h2. Powerline
+
+On ubuntu:
+
+mkdir -p ~/.fonts/ && cd ~/.fonts/ && git clone https://github.com/scotu/ubuntu-mono-powerline.git && cd ~
