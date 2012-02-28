@@ -1,4 +1,5 @@
 call pathogen#runtime_append_all_bundles() 
+call pathogen#helptags()
 
 source ~/.vim/vimrc
 source ~/.vim/activate_django.vim
