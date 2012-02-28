@@ -174,10 +174,6 @@ if has("gui_macvim")
 endif
 
 colorscheme wombat256mod
-"disable colorscheme for term
-if (&term == 'xterm-color')
-    colorscheme default
-endif
 
 "django mappings from http://code.djangoproject.com/wiki/UsingVimWithDjango#no1
 let g:last_relative_dir = ''
