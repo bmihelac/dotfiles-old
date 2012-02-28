@@ -11,8 +11,8 @@ Install vim files:
 
 <pre><code>
 cd ~
-ln -s REPOS_DIR/vim ~/.vim
-ln -s .vim/myvimrc .vimrc
+ln -fs ~/dev/dotfiles/vim ~/.vim
+ln -fs .vim/myvimrc .vimrc
 </code></pre>
 
 h2. Python plugins
