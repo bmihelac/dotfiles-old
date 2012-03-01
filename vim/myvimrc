@@ -169,8 +169,8 @@ cmap w!! w !sudo tee % >/dev/null
 
 " MacVim
 if has("gui_macvim")
-    "set guifont=Inconsolata:h14
-    set guifont=Monaco:h12
+    set guifont=Monaco\ for\ Powerline:h12
+    "set guifont=Inconsola
 endif
 
 colorscheme wombat256mod
@@ -252,3 +252,6 @@ com! DiffSaved call s:DiffWithSaved()
 
 " always vertical split in diff
 :set diffopt+=vertical
+
+"vim-powerline
+let g:Powerline_symbols = 'fancy'
