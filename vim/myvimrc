@@ -255,3 +255,12 @@ com! DiffSaved call s:DiffWithSaved()
 
 "vim-powerline
 let g:Powerline_symbols = 'fancy'
+
+"zen-coding
+let g:user_zen_settings = { 'indentation' : ' ' }
+
+"convert trailing tabs to 2 spaces
+:nnoremap <Leader>ts :%s/\t/  /g<CR>
+
+"remove whitespace at end of lines
+:nnoremap <Leader>rs :%s/\s\+$//g<CR>
