@@ -264,3 +264,11 @@ let g:user_zen_settings = { 'indentation' : ' ' }
 
 "remove whitespace at end of lines
 :nnoremap <Leader>rs :%s/\s\+$//g<CR>
+
+" fugitive shortcuts
+" push
+:nnoremap <Leader>gp :Git push<CR>
+" commit current file
+:nnoremap <Leader>gc :Git commit % -m ""<left>
+" status
+:nnoremap <Leader>gs :Gstatus<CR>
