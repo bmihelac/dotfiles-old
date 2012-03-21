@@ -272,3 +272,7 @@ let g:user_zen_settings = { 'indentation' : ' ' }
 :nnoremap <Leader>gc :Git commit % -m ""<left>
 " status
 :nnoremap <Leader>gs :Gstatus<CR>
+
+"html helpers
+"wrap selection in a link
+:vmap <Leader>wa S<a href="#">
