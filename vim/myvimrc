@@ -47,6 +47,8 @@ autocmd FileType python set ai ts=4 sts=4 et sw=4
 autocmd FileType javascript,scss,css set ai et ts=2 sts=2 sw=2
 autocmd BufNewFile,BufRead *.jst.ejs set filetype=html
 
+"Let zen-coding and less work together
+autocmd FileType less set ft=less.css
 
 " line numbers
 :nmap <F9> :set invnumber<CR>
