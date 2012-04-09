@@ -18,3 +18,5 @@ au BufNewFile,BufRead *.ru				set filetype=ruby.rackup
 
 " eRuby
 au BufNewFile,BufRead *.erb,*.rhtml			set filetype=eruby
+
+map <F7> Orequire 'debugger'; debugger<ESC>
