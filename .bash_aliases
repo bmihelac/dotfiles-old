@@ -9,6 +9,7 @@ alias gd='git diff'
 alias gdc='git diff --cached'
 alias gl='git log'
 alias glg="git log --graph --pretty=format:'%Cblue%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+alias glo="git log --oneline"
 alias gpl='git pull'
 alias gps='git push'
 alias gs='git status'
@@ -23,3 +24,6 @@ alias ...="cd ../.."
 alias pyclean='find . -name "*.pyc" -exec rm {} \;'
 alias runserver='python manage.py runserver_plus 0.0.0.0:8000'
 alias djshell='python manage.py shell_plus'
+
+#Ruby
+alias be='bundle exec'
