@@ -165,6 +165,7 @@ endfu
 
 command! RunPyBuffer call DoRunPyBuffer2()
 map <Leader>p :RunPyBuffer<CR>
+nnoremap <Leader>pd :RopeShowDoc<CR>
 
 " sudo & write
 cmap w!! w !sudo tee % >/dev/null
