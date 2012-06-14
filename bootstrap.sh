@@ -20,3 +20,5 @@ git submodule update
 cd vim/bundle/command-t/
 bundle install
 rake make
+
+sudo pip install rope ropevim
