@@ -95,6 +95,9 @@ nnoremap 9 9gt
 
 "Map leader to ,
 let mapleader = ","
+
+nnoremap <Leader>,m :set mouse-=a
+nnoremap <Leader>,M :set mouse+=a
 "
 "copy current file name to register
 :nmap <Leader>f :let @+ = expand('%:t')<CR>
