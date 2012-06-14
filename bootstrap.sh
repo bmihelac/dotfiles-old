@@ -1,3 +1,4 @@
+#!/bin/bash
 cd ~
 ln -s -f ~/dev/dotfiles/gitignore .gitignore
 ln -s -f ~/dev/dotfiles/gitconfig .gitconfig
