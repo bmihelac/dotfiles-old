@@ -17,4 +17,6 @@ ln -fs .vim/myvimrc .vimrc
 cd ~/dev/dotfiles/
 git submodule init
 git submodule update
-
+cd vim/bundle/command-t/
+bundle install
+rake make
