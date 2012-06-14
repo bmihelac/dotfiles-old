@@ -7,14 +7,6 @@ git submodule init
 git submodule update
 </code></pre>
 
-Install vim files:
-
-<pre><code>
-cd ~
-ln -fs ~/dev/dotfiles/vim ~/.vim
-ln -fs .vim/myvimrc .vimrc
-</code></pre>
-
 h2. Python plugins
 
 rope, rope, ropevim install with easy_install or pip.

@@ -13,4 +13,5 @@ ln -s -f ~/dev/dotfiles/.ackrc .ackrc
 ln -s -f ~/dev/dotfiles/.tmux.conf ~/.tmux.conf
 
 ln -s -f ~/dev/dotfiles/vim ~/.vim
+ln -fs .vim/myvimrc .vimrc
 
