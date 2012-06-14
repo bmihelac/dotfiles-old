@@ -14,4 +14,7 @@ ln -s -f ~/dev/dotfiles/.tmux.conf ~/.tmux.conf
 
 ln -s -f ~/dev/dotfiles/vim ~/.vim
 ln -fs .vim/myvimrc .vimrc
+cd ~/dev/dotfiles/
+git submodule init
+git submodule update
 
