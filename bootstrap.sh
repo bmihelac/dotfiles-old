@@ -11,3 +11,5 @@ ln -s -f ~/dev/dotfiles/.be-completion.sh ~/.be-completion.sh
 ln -s -f ~/dev/dotfiles/.ackrc .ackrc
 ln -s -f ~/dev/dotfiles/.tmux.conf ~/.tmux.conf
 
+ln -s -f ~/dev/dotfiles/vim ~/.vim
+
