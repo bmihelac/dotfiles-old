@@ -1,0 +1,15 @@
+#!/bin/bash
+export CONF_OPT_GUI='--enable-gnome-check'
+export CONF_OPT_PERL='--enable-perlinterp'
+export CONF_OPT_PYTHON='--enable-pythoninterp'
+export CONF_OPT_TCL='--enable-tclinterp --with-tcl=tclsh8.4'
+export CONF_OPT_RUBY='--enable-rubyinterp=yes'
+export CONF_OPT_MZSCHEME='--disable-mzschemeinterp'
+#export CONF_OPT_PLTHOME='--with-plthome=/usr/local/plt'
+export CONF_OPT_CSCOPE='--enable-cscope'
+export CONF_OPT_MULTIBYTE='--enable-multibyte'
+export CONF_OPT_FEAT='--with-features=huge'
+export CONF_OPT_COMPBY='"--with-compiledby=bmihelac@mihelac.org"'
+export CONF_OPT_GUI='--enable-gui'
+export CONF_OPT_GUI='--with-x'
+
