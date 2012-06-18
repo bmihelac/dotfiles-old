@@ -58,8 +58,8 @@ let g:fuzzy_ignore="*.pyc,*~,tmp/*"
 " Auto reload changed files
 :set autoread
 
-" map shift+enter to add new line below current staying in normal mode 
-map <S-Enter> o<Esc>
+" map enter to add new line below current staying in normal mode 
+map <Enter> o<Esc>
 
 " smart ignorecase
 :set smartcase
