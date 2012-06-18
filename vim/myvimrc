@@ -7,6 +7,11 @@ source ~/.vim/activate_django.vim
 "Map leader to ,
 let mapleader = ","
 
+" keys in terminal
+set <S-F5>=[18~
+map <S-F5> :NERDTreeToggle<CR>
+
+
 map <F3> :NERDTreeToggle<CR>
 map <F4> :TlistToggle<CR>
 nnoremap <F2> :set invpaste paste?<CR>
@@ -60,6 +65,7 @@ let g:fuzzy_ignore="*.pyc,*~,tmp/*"
 
 " map enter to add new line below current staying in normal mode 
 map <Enter> o<Esc>
+map <S-Enter> o<Esc>
 
 " smart ignorecase
 :set smartcase
