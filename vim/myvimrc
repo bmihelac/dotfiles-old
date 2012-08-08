@@ -56,6 +56,7 @@ autocmd FileType less set ft=less.css
 map <C-F> :CommandT<CR>
 map <C-F6> :CommandTFlush<CR>
 let g:fuzzy_ignore="*.pyc,*~,tmp/*"
+set wildignore+=*.jpg,*.gif,*.png,*.pdf
 
 "NerdTREE mapings
 :map <F5> :NERDTreeFind<CR>
