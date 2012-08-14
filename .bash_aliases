@@ -24,6 +24,7 @@ alias ...="cd ../.."
 alias pyclean='find . -name "*.pyc" -exec rm {} \;'
 alias runserver='python manage.py runserver_plus 0.0.0.0:8000'
 alias djshell='python manage.py shell_plus'
+alias server='python -m SimpleHTTPServer'
 
 #Ruby
 alias bex='bundle exec'
