@@ -1,3 +1,6 @@
+"flake8
+autocmd FileType python map <buffer> <M-F7> :call Flake8()<CR>
+
 call pathogen#runtime_append_all_bundles() 
 call pathogen#helptags()
 
@@ -277,8 +280,6 @@ let g:syntastic_mode_map = { 'mode': 'active',
                              \ 'active_filetypes': ['ruby', 'python'],
                              \ 'passive_filetypes': ['html'] }"
 
-"flake8
-autocmd FileType python map <buffer> <C-F7> :call Flake8()<CR>
 
 "convert trailing tabs to 2 spaces
 :nnoremap <Leader>ts :%s/\t/  /g<CR>
