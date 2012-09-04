@@ -272,6 +272,14 @@ let g:Powerline_symbols = 'fancy'
 "zen-coding
 let g:user_zen_settings = { 'indentation' : ' ' }
 
+"syntastic
+let g:syntastic_mode_map = { 'mode': 'active',
+                             \ 'active_filetypes': ['ruby', 'python'],
+                             \ 'passive_filetypes': ['html'] }"
+
+"flake8
+autocmd FileType python map <buffer> <C-F7> :call Flake8()<CR>
+
 "convert trailing tabs to 2 spaces
 :nnoremap <Leader>ts :%s/\t/  /g<CR>
 
