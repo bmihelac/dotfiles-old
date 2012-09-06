@@ -250,6 +250,17 @@ com! DiffSaved call s:DiffWithSaved()
 " ack
 :nnoremap <leader>a <Esc>:Ack! 
 
+
+" Map key to toggle opt
+function MapToggle(key, opt)
+  let cmd = ':set '.a:opt.'! \| set '.a:opt."?\<CR>"
+  exec 'nnoremap '.a:key.' '.cmd
+  exec 'inoremap '.a:key." \<C-O>".cmd
+endfunction
+command -nargs=+ MapToggle call MapToggle(<f-args>)
+
+MapToggle <F11> ignorecase
+
 "
 " swap 2 params in visual selection
 " ie: fun(a(), b()) => fun(b(), a())
