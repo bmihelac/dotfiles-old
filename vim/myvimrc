@@ -274,6 +274,10 @@ MapToggle <F11> ignorecase
 "quote every line in single quotes, add comma at the end, and reformat block
 :vnoremap <Leader>q' :s/\(.*\)/'\1',/g<CR>gv=:nohlsearch<CR>
 
+" make dict from kwargs in selection
+" converts a=b into 'a': b
+:vnoremap <Leader>qd :s/\(\w\+\)=/'\1': /g<CR>
+
 " tidy html
 :vnoremap <Leader>T :!tidy -q -i -xml<CR>
 
