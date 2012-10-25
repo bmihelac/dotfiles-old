@@ -7,6 +7,9 @@ call pathogen#helptags()
 source ~/.vim/vimrc
 source ~/.vim/activate_django.vim
 
+"tmux
+set clipboard=unnamed
+
 "Map leader to ,
 let mapleader = ","
 
@@ -57,7 +60,8 @@ autocmd FileType less set ft=less.css
 
 " command-t
 map <C-F> :CommandT<CR>
-map <C-F6> :CommandTFlush<CR>
+map <F6> :CommandTFlush<CR>
+
 let g:fuzzy_ignore="*.pyc,*~,tmp/*"
 set wildignore+=*.jpg,*.gif,*.png,*.pdf
 
