@@ -3,6 +3,7 @@ cd ~
 ln -s -f ~/dev/dotfiles/gitignore .gitignore
 ln -s -f ~/dev/dotfiles/gitconfig .gitconfig
 
+ln -s -f ~/dev/dotfiles/.bash_prompt .bash_prompt
 ln -s -f ~/dev/dotfiles/.bash_aliases .bash_aliases
 ln -s -f ~/dev/dotfiles/.bash_exports .bash_exports
 ln -s -f ~/dev/dotfiles/.bash_profile .bash_profile

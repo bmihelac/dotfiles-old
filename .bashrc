@@ -1,6 +1,7 @@
 # vim:set ft=sh :
 #echo ".bashrc"
 
+source ~/.bash_prompt
 # exports
 . ~/.bash_exports
 
