@@ -323,3 +323,6 @@ let g:syntastic_mode_map = { 'mode': 'active',
 "xml helpers
 "convert '<ID>20000608012</ID>'  to 'ID=20000608012,' on current line
 :nnoremap <Leader>xx :s/<\(\w\+\)>\([^<]\+\)<[^>]\+>/\1='\2',/g
+
+"insert iso-date
+:nnoremap <Leader>d "=strftime("%Y-%m-%d")<CR>P
