@@ -27,6 +27,12 @@
   lg = log -p[core]
 	editor = mate -w
 [core]
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/bmihelac/.gitignore
 [push]
 	default = matching
+
+[hub]
+protocol = https
+
+[credential]
+helper = /opt/boxen/bin/boxen-git-credential
