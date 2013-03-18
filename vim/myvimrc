@@ -326,3 +326,6 @@ let g:syntastic_mode_map = { 'mode': 'active',
 
 "insert iso-date
 :nnoremap <Leader>d "=strftime("%Y-%m-%d")<CR>P
+
+"convert compass variable to less variable
+:nnoremap <Leader>cl :%s/\$\(\w\+\)/@\1/g<CR>
