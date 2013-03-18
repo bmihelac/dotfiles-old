@@ -2,6 +2,8 @@
 shopt -s histappend
 export HISTSIZE=2500
 
+PROMPT_COMMAND="history -a"
+
 export LC_CTYPE=en_US.UTF-8
 export EDITOR="vim"
 
