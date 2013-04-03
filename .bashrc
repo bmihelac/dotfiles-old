@@ -10,9 +10,9 @@ source ~/.bash_prompt
 
 # be autocomplete
 source ~/.be-completion.sh
+. ~/.my/django_bash_completion
 
 # System-specific stuff
 if [ -f ~/.bash_local ]; then
     . ~/.bash_local
 fi
-
