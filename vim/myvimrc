@@ -223,7 +223,7 @@ fun! RelatedFile(file)
     return ''
 endfun
 
-fun SetAppDir()
+fun! SetAppDir()
     if filereadable(expand("%:h"). '/models.py') || isdirectory(expand("%:h") . "/templatetags/")
         let g:last_relative_dir = expand("%:h") . '/'
         return ''
@@ -256,12 +256,12 @@ com! DiffSaved call s:DiffWithSaved()
 
 
 " Map key to toggle opt
-function MapToggle(key, opt)
+function! MapToggle(key, opt)
   let cmd = ':set '.a:opt.'! \| set '.a:opt."?\<CR>"
   exec 'nnoremap '.a:key.' '.cmd
   exec 'inoremap '.a:key." \<C-O>".cmd
 endfunction
-command -nargs=+ MapToggle call MapToggle(<f-args>)
+command! -nargs=+ MapToggle call MapToggle(<f-args>)
 
 MapToggle <F11> ignorecase
 
@@ -298,6 +298,9 @@ let g:user_zen_settings = { 'indentation' : ' ' }
 let g:syntastic_mode_map = { 'mode': 'active',
                              \ 'active_filetypes': ['ruby', 'python'],
                              \ 'passive_filetypes': ['html'] }"
+
+" xml formattin<D-1><D-2>
+au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
 
 
 "convert trailing tabs to 2 spaces
