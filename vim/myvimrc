@@ -153,6 +153,10 @@ let @q='yypVr='
 let @w='yypVr-'
 let @e='yypVr^'
 
+"python-mode
+" use vim-python-pep8-indent
+let g:pymode_indent = 0
+
 " Python tools
 "let ropevim_vim_completion=1
 "let ropevim_extended_complete=1
