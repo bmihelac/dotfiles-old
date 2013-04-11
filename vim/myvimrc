@@ -162,7 +162,7 @@ let g:pymode_lint = 0
 imap <F12> <M-/>
 map <C-F12> :RopeAutoImport<CR>
 map <C-S-A-F12> :RopeGenerateAutoimportCache<CR>
-let g:ropevim_autoimport_modules = ["os", "shutil", 'django.*']
+let g:pymode_rope_autoimport_modules = ["os","shutil","datetime", "django", "django.*"]
 
 map <silent> <F12> :let @+=@"<CR>
 
