@@ -5,7 +5,7 @@ call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
 source ~/.vim/vimrc
-source ~/.vim/activate_django.vim
+"source ~/.vim/activate_django.vim
 
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 " set clipboard=unnamed
@@ -154,35 +154,35 @@ let @w='yypVr-'
 let @e='yypVr^'
 
 " Python tools
-let ropevim_vim_completion=1
-let ropevim_extended_complete=1
-let ropevim_guess_project=1
-let ropevim_enable_autoimport=1
-let g:ropevim_autoimport_modules = ["os", "shutil", 'django.*']
-imap <F12> <M-/>
-map <C-F12> :RopeAutoImport<CR>
-map <C-S-A-F12> :RopeGenerateAutoimportCache<CR>
+"let ropevim_vim_completion=1
+"let ropevim_extended_complete=1
+"let ropevim_guess_project=1
+"let ropevim_enable_autoimport=1
+"let g:ropevim_autoimport_modules = ["os", "shutil", 'django.*']
+"imap <F12> <M-/>
+"map <C-F12> :RopeAutoImport<CR>
+"map <C-S-A-F12> :RopeGenerateAutoimportCache<CR>
 
 
 map <silent> <F12> :let @+=@"<CR>
 
 " Run the current buffer as Python code
-fu! DoRunPyBuffer2()
-    pclose! " force preview window closed
-    setlocal ft=python
+"fu! DoRunPyBuffer2()
+    "pclose! " force preview window closed
+    "setlocal ft=python
 
-    " copy the buffer into a new window, then run that buffer through python
-    sil %y a | below new | sil put a | sil %!python -
-    " indicate the output window as the current previewwindow
-    setlocal previewwindow ro nomodifiable nomodified
+    "" copy the buffer into a new window, then run that buffer through python
+    "sil %y a | below new | sil put a | sil %!python -
+    "" indicate the output window as the current previewwindow
+    "setlocal previewwindow ro nomodifiable nomodified
 
-    " back into the original window
-    winc p
-endfu
+    "" back into the original window
+    "winc p
+"endfu
 
-command! RunPyBuffer call DoRunPyBuffer2()
-map <Leader>p :RunPyBuffer<CR>
-nnoremap <Leader>pd :RopeShowDoc<CR>
+"command! RunPyBuffer call DoRunPyBuffer2()
+"map <Leader>p :RunPyBuffer<CR>
+"nnoremap <Leader>pd :RopeShowDoc<CR>
 
 " sudo & write
 cmap w!! w !sudo tee % >/dev/null
