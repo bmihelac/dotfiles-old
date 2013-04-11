@@ -5,7 +5,7 @@ call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
 source ~/.vim/vimrc
-source ~/.vim/activate_django.vim
+"source ~/.vim/activate_django.vim
 
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 " set clipboard=unnamed
@@ -153,36 +153,19 @@ let @q='yypVr='
 let @w='yypVr-'
 let @e='yypVr^'
 
-" Python tools
-let ropevim_vim_completion=1
-let ropevim_extended_complete=1
-let ropevim_guess_project=1
-let ropevim_enable_autoimport=1
-let g:ropevim_autoimport_modules = ["os", "shutil", 'django.*']
+"python-mode
+" use vim-python-pep8-indent
+let g:pymode_indent = 0
+" do not Load pylint code plugin, use flake8 for now
+let g:pymode_lint = 0
+
 imap <F12> <M-/>
 map <C-F12> :RopeAutoImport<CR>
 map <C-S-A-F12> :RopeGenerateAutoimportCache<CR>
-
+let g:pymode_rope_autoimport_modules = ["os","shutil","datetime", "django", "django.*"]
+map <F7> <Leader>b
 
 map <silent> <F12> :let @+=@"<CR>
-
-" Run the current buffer as Python code
-fu! DoRunPyBuffer2()
-    pclose! " force preview window closed
-    setlocal ft=python
-
-    " copy the buffer into a new window, then run that buffer through python
-    sil %y a | below new | sil put a | sil %!python -
-    " indicate the output window as the current previewwindow
-    setlocal previewwindow ro nomodifiable nomodified
-
-    " back into the original window
-    winc p
-endfu
-
-command! RunPyBuffer call DoRunPyBuffer2()
-map <Leader>p :RunPyBuffer<CR>
-nnoremap <Leader>pd :RopeShowDoc<CR>
 
 " sudo & write
 cmap w!! w !sudo tee % >/dev/null
@@ -194,42 +177,6 @@ if has("gui_macvim")
 endif
 
 colorscheme wombat256mod
-
-"django mappings from http://code.djangoproject.com/wiki/UsingVimWithDjango#no1
-let g:last_relative_dir = ''
-nnoremap \1 :call RelatedFile ("models.py")<cr>
-nnoremap \2 :call RelatedFile ("views.py")<cr>
-nnoremap \3 :call RelatedFile ("urls.py")<cr>
-nnoremap \4 :call RelatedFile ("admin.py")<cr>
-nnoremap \5 :call RelatedFile ("tests.py")<cr>
-nnoremap \6 :call RelatedFile ( "templates/" )<cr>
-nnoremap \7 :call RelatedFile ( "templatetags/" )<cr>
-nnoremap \8 :call RelatedFile ( "management/" )<cr>
-nnoremap \0 :e settings.py<cr>
-nnoremap \9 :e urls.py<cr>
-
-fun! RelatedFile(file)
-    "This is to check that the directory looks djangoish
-    if filereadable(expand("%:h"). '/models.py') || isdirectory(expand("%:h") . "/templatetags/")
-        exec "edit %:h/" . a:file
-        let g:last_relative_dir = expand("%:h") . '/'
-        return ''
-    endif
-    if g:last_relative_dir != ''
-        exec "edit " . g:last_relative_dir . a:file
-        return ''
-    endif
-    echo "Cant determine where relative file is : " . a:file
-    return ''
-endfun
-
-fun! SetAppDir()
-    if filereadable(expand("%:h"). '/models.py') || isdirectory(expand("%:h") . "/templatetags/")
-        let g:last_relative_dir = expand("%:h") . '/'
-        return ''
-    endif
-endfun
-autocmd BufEnter *.py call SetAppDir()
 
 " really remove
 nnoremap R "_d
