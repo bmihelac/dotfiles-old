@@ -156,6 +156,8 @@ let @e='yypVr^'
 "python-mode
 " use vim-python-pep8-indent
 let g:pymode_indent = 0
+" do not Load pylint code plugin, use flake8 for now
+let g:pymode_lint = 0
 
 " Python tools
 "let ropevim_vim_completion=1
