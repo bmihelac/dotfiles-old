@@ -163,6 +163,7 @@ imap <F12> <M-/>
 map <C-F12> :RopeAutoImport<CR>
 map <C-S-A-F12> :RopeGenerateAutoimportCache<CR>
 let g:pymode_rope_autoimport_modules = ["os","shutil","datetime", "django", "django.*"]
+map <F7> <Leader>b
 
 map <silent> <F12> :let @+=@"<CR>
 
