@@ -27,7 +27,7 @@
   lg = log -p[core]
 	editor = mate -w
 [core]
-	excludesfile = /Users/bmihelac/.gitignore
+	excludesfile = ~/.gitignore
 [push]
 	default = matching
 
