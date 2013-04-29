@@ -5,3 +5,9 @@ tags
 vim/undofiles/*
 vim/view
 .netrwhist
+.DS_Store
+tags
+*.swo
+*.pyc
+.svn
+.ropeproject
