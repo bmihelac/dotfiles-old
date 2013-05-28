@@ -158,6 +158,8 @@ let @e='yypVr^'
 let g:pymode_indent = 0
 " do not Load pylint code plugin, use flake8 for now
 let g:pymode_lint = 0
+" do not set "number"
+let g:pymode_options = 0
 
 imap <F12> <M-/>
 map <C-F12> :RopeAutoImport<CR>
@@ -225,7 +227,7 @@ MapToggle <F11> ignorecase
 "quote every line in single quotes, add comma at the end, and reformat block
 :vnoremap <Leader>q' :s/\(.*\)/'\1',/g<CR>gv=:nohlsearch<CR>
 
-" make dict from kwargs in selection
+" make django dict from kwargs in selection
 " converts a=b into 'a': b
 :vnoremap <Leader>qd :s/\(\w\+\)=/'\1': /g<CR>
 
