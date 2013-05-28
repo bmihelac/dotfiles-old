@@ -10,6 +10,7 @@ alias gdc='git diff --cached'
 alias gl='git log'
 alias glg="git log --graph --pretty=format:'%Cblue%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 alias glo="git log --reverse --oneline"
+alias gitday="git log --reverse --oneline --since=yesterday"
 alias gpl='git pull'
 alias gps='git push'
 alias gs='git status'
