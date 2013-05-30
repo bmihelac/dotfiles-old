@@ -19,7 +19,6 @@ map <S-F5> :NERDTreeToggle<CR>
 
 
 map <F3> :NERDTreeToggle<CR>
-map <F4> :TlistToggle<CR>
 nnoremap <F2> :set invpaste paste?<CR>
 
 :set guioptions-=T  "remove toolbar
@@ -213,6 +212,7 @@ endfunction
 command! -nargs=+ MapToggle call MapToggle(<f-args>)
 
 MapToggle <F11> ignorecase
+MapToggle <F4> list
 
 "
 " swap 2 params in visual selection
