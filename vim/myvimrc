@@ -147,6 +147,7 @@ map <C-l> <C-w>l
 " disable backups
 set nobackup
 set noswapfile
+set nowritebackup
 
 " highlights the background in a subtle red for text that goes over the 80
 set cc=80
@@ -257,6 +258,9 @@ let g:user_zen_settings = { 'indentation' : ' ' }
 let g:syntastic_mode_map = { 'mode': 'active',
                              \ 'active_filetypes': ['ruby', 'python'],
                              \ 'passive_filetypes': ['html'] }"
+let g:syntastic_auto_loc_list=0
+let g:syntastic_always_populate_loc_list=1
+let g:syntastic_loc_list_height=5
 
 " xml formattin<D-1><D-2>
 au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
@@ -291,3 +295,5 @@ au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
 
 "convert compass variable to less variable
 :nnoremap <Leader>cl :%s/\$\(\w\+\)/@\1/g<CR>
+
+
