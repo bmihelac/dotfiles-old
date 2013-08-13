@@ -1,6 +1,8 @@
 # vim:set ft=sh :
 #echo ".bashrc"
 
+ulimit -n 1024
+
 source ~/.bash_prompt
 # exports
 . ~/.bash_exports
