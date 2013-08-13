@@ -296,4 +296,10 @@ au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
 "convert compass variable to less variable
 :nnoremap <Leader>cl :%s/\$\(\w\+\)/@\1/g<CR>
 
+"disable pydoc
+let g:pymode_doc = 0
 
+"quickfix
+nmap K :lprev<CR>
+nmap J :lnext<CR>
+nmap <script> <silent> L :call ToggleLocationList()<CR>
