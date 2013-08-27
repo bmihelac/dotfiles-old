@@ -62,7 +62,7 @@ map <C-F> :CommandT<CR>
 map <F6> :CommandTFlush<CR>
 
 let g:fuzzy_ignore="*.pyc,*~,tmp/*"
-set wildignore+=*.jpg,*.gif,*.png,*.pdf
+set wildignore+=*.jpg,*.gif,*.png,*.pdf,node_modules/**
 
 "NerdTREE mapings
 :map <F5> :NERDTreeFind<CR>
@@ -300,6 +300,6 @@ au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
 let g:pymode_doc = 0
 
 "quickfix
-nmap K :lprev<CR>
-nmap J :lnext<CR>
-nmap <script> <silent> L :call ToggleLocationList()<CR>
+nmap <A-K> :lprev<CR>
+nmap <A-J> :lnext<CR>
+nmap <script> <silent> <A-L> :call ToggleLocationList()<CR>
