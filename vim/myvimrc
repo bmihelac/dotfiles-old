@@ -4,6 +4,8 @@ autocmd FileType python map <buffer> <M-F7> :call Flake8()<CR>
 call pathogen#runtime_append_all_bundles() 
 call pathogen#helptags()
 
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
 source ~/.vim/vimrc
 "source ~/.vim/activate_django.vim
 
@@ -58,11 +60,12 @@ autocmd FileType less set ft=less.css
 :set wildignore=*.o,*~,*.pyc
 
 " command-t
-map <C-F> :CommandT<CR>
-map <F6> :CommandTFlush<CR>
-
 let g:fuzzy_ignore="*.pyc,*~,tmp/*"
 set wildignore+=*.jpg,*.gif,*.png,*.pdf,node_modules/**
+
+"ctrlp
+let g:ctrlp_map = '<c-f>'
+let g:ctrlp_cmd = 'CtrlP'
 
 "NerdTREE mapings
 :map <F5> :NERDTreeFind<CR>
